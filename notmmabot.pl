@@ -37,7 +37,7 @@ my %usedtitles = ();
 my %usedlinks = ();
 my %colors = ();
 
-my $feedsfile = 'PATH_TO_YOUR_FEEDS_FILE';
+my $feedsfile = '/Users/user/Work/Temp/ircbot/mma-news/feeds';
 my $fetchinterval = 600;
 
 my $heartbeat;
@@ -48,14 +48,14 @@ my $window    = 5;
 my $bitlyuser = '';
 my $bitlyapikey = '';
 
-my $nickname = "ircnick";
-my $username = "ircnick";
-my $realname = "ircnick";
+my $nickname = "mmanewsbot";
+my $username = "mmanewsbot";
+my $realname = "mmanewsbot";
 my $serverpass = "username:password";
 
 my @feedreaders = ();
 
-my @allchannels = qw/ ##mychan /;
+my @allchannels = qw/ ##news-mma /;
 
 my $c = AnyEvent->condvar;
 
@@ -132,8 +132,8 @@ $irc->reg_cb (
                 on_fetch => sub {
                     my ($feed_reader, $new_entries, $feed, $error) = @_;
 
-                    #print "Checking...";
-                    #print $new_entries;
+                    print "Checking...";
+                    print $new_entries;
 
                     if (defined $error) {
                         warn "ERROR: $key -- $error\n";
