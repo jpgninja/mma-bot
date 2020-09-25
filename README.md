@@ -1,2 +1,2 @@
-# notnewsbot
-An IRC bot written in Perl for dumping RSS feeds in to an IRC channel
+# notmmabot
+An IRC bot written in Perl for dumping RSS feeds of MMA blogs into an IRC channel
